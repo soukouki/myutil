@@ -13,6 +13,9 @@ myscalc.cmd
 next-commit.rb
 	次の数字でコミットする
 
+nw.ps1
+	コマンドプロンプトを立ち上げて引数のコマンドを実行し、数秒後に閉じる
+
 rcalc.rb
 	pryやirbを使うほどでもないやつ
 
