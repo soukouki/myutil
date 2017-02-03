@@ -6,6 +6,8 @@ pathの通ったところに置くと良いかも
 - die.rb
 	- ダイス表記の期待値を求める
 	- `$ "2d3+1"|die #=>5.0`
+- gs.cmd
+	- gitコマンドを使えるpowershellを起動
 - migawari.ps1
 	- フリーズとかするやつのテスト用
 - myscalc.cmd
