@@ -3,6 +3,8 @@ pathの通ったところに置くと良いかも
 
 環境依存が激しいものもあるのはご愛嬌
 
+- ac.cmd
+	- gitでaddして引数をコミットするだけ
 - atom.ps1
 	- atomを使うときのやつ
 - die.rb
@@ -22,5 +24,7 @@ pathの通ったところに置くと良いかも
 	- sign.ps1へ
 - sign.ps1
 	- コマンドを実行して、sign.midを鳴らす
+- st.cmd
+	- `git status`
 - symlink.ps1
 	- 第一引数にファイル名、第二引数にパスでシンボリックリンクを作る
