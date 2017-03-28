@@ -10,6 +10,7 @@ pathの通ったところに置くと良いかも
 	- `$ "2d3+1"|die #=>5.0`
 - gs.cmd
 	- gitコマンドを使えるpowershellを起動
+	- 第一引数のとこにcdします
 - migawari.ps1
 	- フリーズとかするやつのテスト用
 - myscalc.cmd
