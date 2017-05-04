@@ -1,5 +1,5 @@
 
-x, y, z = gets
+x, y, z = (ARGV[0] || gets)
 	.chomp
 	.match(/(\d+)d(\d+)((\+|-)\d+|)/)
 	.captures
