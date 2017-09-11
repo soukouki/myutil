@@ -17,6 +17,7 @@ else
 	loop do
 		puts uri = "http://#{domain}/#{ncode}/#{start}/"
 		str = get_text(uri, cookie)
+		puts str
 		loop do
 			# コマンドラインの文字数制限が8192文字のため、5000文字+次の改行までで区切って実行する。
 			# もちろん8192文字以上改行のない文章だと動かないが、そのような文章が来てから考える。
@@ -25,7 +26,6 @@ else
 			`softalk "#{piece_str.gsub("\n"){"\\n"}}"`
 			break if str.length==0
 		end
-		puts str
 		puts "push enter."
 		STDIN.gets
 		start += 1
