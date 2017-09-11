@@ -25,7 +25,7 @@ else
 			`softalk "#{piece_str.gsub("\n"){"\\n"}}"`
 			break if str.length==0
 		end
-		#puts str
+		puts str
 		puts "push enter."
 		STDIN.gets
 		start += 1
