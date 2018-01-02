@@ -1,15 +1,19 @@
 ﻿
-
 $atom = (join-path $home "\AppData\Local\atom\bin\atom.cmd")
 
 $path = $ARGS[0]
 
-if($path -eq $null) { # 引数がない場合は現在のディレクトリを開く
+if($path -eq $null) {
+	echo "引数がない場合ため、現在のディレクトリを開きます"
 	start $atom (pwd)
-} elseif($path.contains("*")) { # パスに「*」が入ったときはlsで探して開く
-	start $atom (ls $path)
-} elseif(Split-Path $path -isAbsolute) { # pathが絶対パスならそのパスを開く
-	start $atom $ARGS[0]
-} else { # 違えば現在のパスからの引数[0]の相対パスを開く
-	start $atom (join-path (pwd) $path)
+} elseif(Test-Path $path) {
+	echo "指定されたパスが存在するため、それを開きます"
+	start $atom $path
+} elseif($path.contains("*")) {
+	$find = ls $path
+	echo "パスに`*`が入っているため、検索して開きます" ("結果 : "+$find)
+	start $atom $find
+} else {
+	echo "現在存在しないフォルダを開きます"
+	start $atom (Join-Path $path (Split-Path $path -leaf))
 }
